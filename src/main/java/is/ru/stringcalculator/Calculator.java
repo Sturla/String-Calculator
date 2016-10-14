@@ -14,8 +14,9 @@ public class Calculator {
 	}
 
 	private static String[] splitNumbers(String numbers){
-		numbers.replace('\n',',');
-		return numbers.split(",");
+		String s = numbers;
+		s = Replace(s);
+		return s.split(",");
 	}
 
 	private static int sum(String[] numbers){
@@ -24,5 +25,10 @@ public class Calculator {
 			total += Integer.parseInt(number);
 		}
 		return total;
+	}
+
+	private static String Replace(String numbers){
+		
+		return numbers.replace('\n',',');
 	}
 }
